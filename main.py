@@ -48,24 +48,25 @@ def android(message):
     reply = run_chatbot(message)
     return reply
 
-@app.route('/api/', methods=["POST"])
+@app.route('/api/', methods=["GET", "POST"])
 def main_interface():
-    response = request.get_json()
-    msg = response['message']
-    print(msg)
-    msg = msg.replace("&nbsp;","")
-    print(msg)
-    msg_lng = detect_lang(msg)
-    if msg_lng == 'te':
-        msg = translate_lang(msg, 'en')
-    print(msg)
-    reply = run_chatbot(msg)
-    print(reply)
-    reply = translate_lang(reply, 'te')
-    print(reply)
-    #tts(reply)
-    response.update({'reply': reply })
-    return jsonify(response)
+    if request.method == "POST" :
+        response = request.get_json()
+        msg = response['message']
+        print(msg)
+        msg = msg.replace("&nbsp;","")
+        print(msg)
+        msg_lng = detect_lang(msg)
+        if msg_lng == 'te':
+            msg = translate_lang(msg, 'en')
+        print(msg)
+        reply = run_chatbot(msg)
+        print(reply)
+        reply = translate_lang(reply, 'te')
+        print(reply)
+        #tts(reply)
+        response.update({'reply': reply })
+        return jsonify(response)
 
 @app.after_request
 def add_headers(response):
