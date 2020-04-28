@@ -3,6 +3,7 @@ numpy
 Flask
 nltk
 spacy
+dialogflow
 googletrans
 google-cloud-texttospeech
 google-cloud-translate
