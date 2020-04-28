@@ -51,6 +51,8 @@ def android(message):
 @app.route('/api/', methods=["GET", "POST"])
 def main_interface():
     if 'X-Forwarded-Proto' in request.headers and request.headers['X-Forwarded-Proto'] == 'https':
+        print("Https Request")
+        print(request)
         return jsonify({'reply' : 'Error Inut Format'})
     else:
         response = request.get_json()
