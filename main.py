@@ -50,7 +50,9 @@ def android(message):
 
 @app.route('/api/', methods=["GET", "POST"])
 def main_interface():
-    if request.method == "POST" :
+    if 'X-Forwarded-Proto' in request.headers and request.headers['X-Forwarded-Proto'] == 'https':
+        return jsonify({'reply' : 'Error Inut Format'})
+    else:
         response = request.get_json()
         msg = response['message']
         print(msg)
