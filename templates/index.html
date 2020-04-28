@@ -127,7 +127,7 @@
 		run_dots()
 		var reply = "";
 		$.ajax({
-            url: "http://"+HOST_URL+":"+PORT_NUM+"/api/",
+            url: HOST_URL+"api/",
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({"message": userMessage})
