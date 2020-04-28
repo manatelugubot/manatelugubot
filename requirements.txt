@@ -1,0 +1,13 @@
+googletrans==2.4.0
+google-cloud-texttospeech==1.0.1
+google-cloud-translate==2.0.0
+wikipedia==1.4.0
+pandas==0.24.2
+numpy==1.16.2
+Flask==1.0.2
+nltk==3.4
+COVID19Py==0.3.0
+gTTS==2.1.1
+IMDbPY==6.8
+spacy==2.1.8
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz#egg=en_core_web_sm
