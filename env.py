@@ -10,7 +10,7 @@ import os
 
 #ENV_PORT = 5000
 #IP_ADDRESS = '0.0.0.0'
-JAVASCRIPT_IP = '127.0.0.1'
+JAVASCRIPT_IP = 'https://manatelugubot.azurewebsites.net/'
 
 HOME_PAGE_FILE = 'index.html'
 
