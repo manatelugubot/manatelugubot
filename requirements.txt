@@ -9,4 +9,3 @@ nltk==3.4
 COVID19Py==0.3.0
 gTTS==2.1.1
 IMDbPY==6.8
-spacy==2.1.8
