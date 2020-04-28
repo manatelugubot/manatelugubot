@@ -53,7 +53,7 @@ def main_interface():
     if 'X-Forwarded-Proto' in request.headers and request.headers['X-Forwarded-Proto'] == 'https':
         print("Https Request")
         print(request)
-        return jsonify({'reply' : 'Error Inut Format'})
+        return jsonify({'reply' : 'Error Inut Format', 'request' : request })
     else:
         response = request.get_json()
         msg = response['message']
