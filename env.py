@@ -8,9 +8,9 @@ Created on Wed Apr 22 14:02:11 2020
 """
 import os
 
-ENV_PORT = 5000
+#ENV_PORT = 5000
 #IP_ADDRESS = '0.0.0.0'
-JAVASCRIPT_IP = 'https://manatelugubot.azurewebsites.net/'
+JAVASCRIPT_IP = '127.0.0.1'
 
 HOME_PAGE_FILE = 'index.html'
 
@@ -29,7 +29,7 @@ weather_api_url = "http://api.openweathermap.org/data/2.5/weather?"
 
 # Dialog FLow
 
-#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'C:\\Users\\rajakishorekavi\\Documents\\Python Scripts\\Applied_AI_API_KEY.json'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = '/home/site/wwwroot/Applied_AI_API_KEY.json'
 
 DIALOGFLOW_PROJECT_ID = 'hybrid-ridge-243805'
 DIALOGFLOW_LANGUAGE_CODE = 'en'
@@ -42,3 +42,9 @@ covidindia_api_url = 'https://api.covid19india.org/state_district_wise.json'
 # Audio file Location
 
 #audio_file_loc = "C:\\Users\\rajakishorekavi\\Python\\Flask\\static\\"
+
+
+# News.org API Key
+
+News_api_key = "a1f6b13d14094c628e4bd18c5a838d56"
+News_api_url = "https://newsapi.org/v2/top-headlines?country=in&apiKey="+News_api_key

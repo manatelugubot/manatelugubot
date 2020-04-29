@@ -105,6 +105,9 @@ def run_chatbot(msg):
                 else:
                     return "As of now, I can only get details of States and Districts from India only."
                 
+        elif intent =='news' :
+            
+            return get_top_news()
         
         else :
             
