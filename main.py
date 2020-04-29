@@ -53,8 +53,9 @@ def android(message):
 def main_interface():
     if 'X-Forwarded-Proto' in request.headers and request.headers['X-Forwarded-Proto'] == 'https':
         response = request.get_json()
-        msg = response['message']
-        print(msg)
+        msg = str(response['message'])
+        msg = msg.replace("&nbsp;","")
+        
         response.update({ 'reply': msg })
         return jsonify(response)
     else:
