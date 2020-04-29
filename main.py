@@ -20,7 +20,8 @@ import pandas as pd
 import numpy as np
 import pickle
 import re
-import requests, json 
+import requests, json
+import sys
 
 import spacy
 from spacy import displacy
@@ -34,6 +35,8 @@ import wikipedia
 from flask import Flask, request
 from flask import render_template
 from flask import jsonify
+
+sys.stdout = open('/home/LogFiles/app.log', 'w')
 
 app = Flask(__name__)
 msg = []
@@ -51,8 +54,11 @@ def android(message):
 @app.route('/api/', methods=["GET", "POST"])
 def main_interface():
     if 'X-Forwarded-Proto' in request.headers and request.headers['X-Forwarded-Proto'] == 'https':
+        print('Hello World!')
         print("Https Request")
+        print("-"*50)
         print(request)
+        print("-"*50)
         return jsonify({'reply' : 'Error Inut Format'})
     else:
         response = request.get_json()
