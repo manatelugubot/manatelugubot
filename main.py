@@ -21,7 +21,6 @@ import numpy as np
 import pickle
 import re
 import requests, json
-import sys
 
 import spacy
 from spacy import displacy
@@ -36,7 +35,6 @@ from flask import Flask, request
 from flask import render_template
 from flask import jsonify
 
-sys.stdout = open('/home/LogFiles/app.log', 'w')
 
 app = Flask(__name__)
 msg = []
