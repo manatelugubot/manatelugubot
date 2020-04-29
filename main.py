@@ -55,7 +55,7 @@ def main_interface():
         response = request.get_json()
         msg = response['message']
         print(msg)
-        response.update({'reply': msg, 'res_type' : type(msg) , 'res_str_type' : str(msg) })
+        response.update({ 'reply': msg })
         return jsonify(response)
     else:
         response = request.get_json()
