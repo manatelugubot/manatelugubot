@@ -5,7 +5,8 @@
 	
 	<script  src="{{ url_for('static', filename='jquery.js')}}" data-turbolinks-track="reload"></script>
 	<link rel="stylesheet" media="all" href="{{ url_for('static', filename='style2.css')}}">
-	<script src="{{ url_for('static', filename='main.js')}}" data-turbolinks-track="reload"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="{{ url_for('static', filename='telugutyping.js')}}" data-turbolinks-track="reload"></script>
 	<script>
 	var HOST_URL = "{{host_url}}"
 	var PORT_NUM = {{port_num}}
@@ -134,6 +135,7 @@
         }).done(function(data) {
             console.log(data);
 			console.log(typeof(data))
+			console.log(typeof(data['reply']))
 			var d = JSON.stringify(data['reply'])
 			console.log(typeof(d))
 			console.log(d)
