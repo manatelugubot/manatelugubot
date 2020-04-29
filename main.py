@@ -59,7 +59,9 @@ def main_interface():
         print("-"*50)
         print(request)
         print("-"*50)
-        return jsonify({'reply' : 'Error Inut Format'})
+        response = request.get_json()
+        msg = response['message']
+        return jsonify({'reply' : msg })
     else:
         response = request.get_json()
         msg = response['message']
