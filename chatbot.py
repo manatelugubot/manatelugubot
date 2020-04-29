@@ -13,6 +13,7 @@ from intent_entity_api import *
 from env import *
 from basic_msgs import *
 from covid_api import *
+from news_api import *
 
 import spacy
 from spacy import displacy
