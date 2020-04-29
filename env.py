@@ -8,7 +8,7 @@ Created on Wed Apr 22 14:02:11 2020
 """
 import os
 
-#ENV_PORT = 5000
+ENV_PORT = 5000
 #IP_ADDRESS = '0.0.0.0'
 JAVASCRIPT_IP = '127.0.0.1'
 
