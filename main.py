@@ -55,9 +55,15 @@ def main_interface():
         response = request.get_json()
         msg = str(response['message'])
         msg = msg.replace("&nbsp;","")
-        
-        response.update({ 'reply': msg })
+        msg_lng = detect_lang(msg)
+        if msg_lng == 'te':
+            msg = translate_lang(msg, 'en')
+        reply = run_chatbot(msg)
+        reply = translate_lang(reply, 'te')
+        #tts(reply)
+        response.update({'reply': reply })
         return jsonify(response)
+    
     else:
         response = request.get_json()
         msg = response['message']
